@@ -2,7 +2,7 @@
 use crate::chunk_type::ChunkType;
 use crc::Crc;
 
-
+#[derive(Debug)]
 pub struct Chunk {
         length: u32, 
         chunk_type: ChunkType,
@@ -58,7 +58,7 @@ impl Chunk {
             println!("CRC: {:#010x}", self.crc);
         }
 
-        fn as_bytes(&self) -> Vec<u8> {
+        pub fn as_bytes(&self) -> Vec<u8> {
             let mut bytes = Vec::new();
             bytes.extend_from_slice(&self.length.to_be_bytes());
             bytes.extend_from_slice(self.chunk_type.bytes());
@@ -68,3 +68,5 @@ impl Chunk {
         }
 
     }
+
+

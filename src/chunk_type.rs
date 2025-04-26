@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub struct ChunkType {
     chunk_type: [u8; 4],
 }
