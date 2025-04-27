@@ -34,7 +34,7 @@ Steps
     Clone this repository:
     bash
 
-git clone https://github.com/your-username/png-message-tool.git
+git clone https://github.com/manishdotsqlite/rust-pngme.git
 cd png-message-tool
 
 Build the project:
